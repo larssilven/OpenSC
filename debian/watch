@@ -1,0 +1,6 @@
+version=4
+
+opts="filenamemangle=s/(?:.*)?v?(\d\S+)\.tar\.gz/opensc-$1.tar.gz/, \
+  uversionmangle=s/-rc/~rc/" \
+  https://github.com/OpenSC/OpenSC/tags (?:.*/)?v?(\d\S+)\.tar\.gz
+

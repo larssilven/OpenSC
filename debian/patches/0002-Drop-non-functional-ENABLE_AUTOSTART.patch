@@ -1,0 +1,23 @@
+From: Bastian Germann <bage@debian.org>
+Date: Fri, 10 Nov 2023 11:54:15 +0000
+Subject: Drop non-functional ENABLE_AUTOSTART
+
+---
+ src/tools/Makefile.am | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/src/tools/Makefile.am b/src/tools/Makefile.am
+index f9ce5bf2e..2e45af0bd 100644
+--- a/src/tools/Makefile.am
++++ b/src/tools/Makefile.am
+@@ -169,10 +169,8 @@ endif
+ applicationsdir = $(datadir)/applications
+ applications_DATA = org.opensc.notify.desktop
+ 
+-if ENABLE_AUTOSTART
+ xdg_autostartdir = $(sysconfdir)/xdg/autostart
+ xdg_autostart_DATA = pkcs11-register.desktop
+-endif
+ 
+ %.desktop: %.desktop.in
+ 	$(AM_V_GEN)$(do_subst) < $< > $@
