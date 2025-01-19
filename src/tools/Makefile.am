@@ -192,10 +192,8 @@ endif
 applicationsdir = $(datadir)/applications
 applications_DATA = org.opensc.notify.desktop
 
-if ENABLE_AUTOSTART
 xdg_autostartdir = $(sysconfdir)/xdg/autostart
 xdg_autostart_DATA = pkcs11-register.desktop
-endif
 
 %.desktop: %.desktop.in
 	$(AM_V_GEN)$(do_subst) < $< > $@

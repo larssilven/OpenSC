@@ -16,7 +16,7 @@ noinst_HEADERS = cards.h ctbcs.h internal.h muscle.h muscle-filesystem.h \
 	card-eoi.h ccid-types.h reader-tr03119.h \
 	card-cac-common.h card-cardos-common.h
 
-AM_CPPFLAGS = -D'OPENSC_CONF_PATH="$(sysconfdir)/opensc.conf"' \
+AM_CPPFLAGS = -D'OPENSC_CONF_PATH="$(sysconfdir)/opensc/opensc.conf"' \
      -D'DEFAULT_SM_MODULE_PATH="$(DEFAULT_SM_MODULE_PATH)"' \
      -D'DEFAULT_SM_MODULE="$(DEFAULT_SM_MODULE)"' \
 	-I$(top_srcdir)/src
